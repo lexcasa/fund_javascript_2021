@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div>
+		<input type="text" name="documento" placeholder="Documento">
+		<input type="number" name="edad" placeholder="Edad">
+		<button onclick="obtenerPersona()">Guardar</button>
+	</div>
+	<div>
+		<ul></ul>
+	</div>
+	<script type="text/javascript">
+		let personas = []
+		let ul = document.getElementsByTagName('ul')[0]
+
+		const MAYOR_EDAD = 18
+		let guardaPersona = function (persona) {
+			if(persona.edad >= MAYOR_EDAD){
+				// Guardo la "persona" que cumple con la cond
+				// dentro de la lista de personas
+				personas.push(persona)
+			} else {
+				alert("La persona es menor de 18 años.")
+			}
+			console.log("personas: ", personas)
+		}
+
+		let obtenerPersona = function (){
+			// Tengo la estructura de datos que va a soportar 
+			// persona de este tipo: {documento: "123213", edad: 29}
+			let persona = {}
+			let documento = document.getElementsByName('documento')[0].value
+			let edad 	  = document.getElementsByName('edad')[0].value
+
+			// asignar los valores del input
+			// dentro del objeto
+			persona.documento = documento
+			persona.edad 	  = edad
+
+			console.log("Nueva persona ingresada :: ", persona)
+
+			// Llamo la funcion: guardaPersona
+			guardaPersona(persona)
+
+			// Construir un HTML dinamico
+			ul.innerHTML = `` // Siempre que de clic en obtenerPersona 
+			// Vacio el HTML interno del UL
+			
+			for (let i = 0; i < personas.length; i++){
+				ul.innerHTML += `<li>${personas[i].documento} - ${personas[i].edad}</li>`
+			}
+			
+		}
+		// TEST con una persona
+		/*let alex = {
+			nombre: "Alex",
+			edad: 15
+		}
+		guardaPersona(alex)*/
+	</script>
+</body>
+</html>

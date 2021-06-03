@@ -1,0 +1,10 @@
+REPASO DE FUNDAMENTOS
+
+	1. Def. de  variables y tipos (x)
+	2. Logica (x)
+	3. Iteracion y control de flujo (IF ELSE, ELSE IF) (x)
+	4. Metodos y est. de datos (x)
+
+	APLICAR los fundamentos en una WebApp (Ingenieria de Software)
+
+		- Manipulacion del DOM (document object model)

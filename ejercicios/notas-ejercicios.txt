@@ -1,0 +1,65 @@
+EJERCICIO 2:
+Obtener el HTML de una etiqueta <p>Mi nombre es Alex</p> e insertar en un 
+<div id="resultado"></div>
+
+	1. Obtener el HTML de una etiqueta
+	2. Guardar ese HTML en memoria y verificar que está ahí
+	3. 
+		3.1 Como obtengo ese HTML a partir del atributo ID
+		3.2 Como inserto el HTML que tengo en memoria dentro de ese elemento
+
+
+	1. LA VISTA: 
+		<p> ... </p>
+		<div> ... </div> 
+	2. JS
+	3. Interaccion del JS ---- HTML 
+
+
+	Asignamos el Texto a la etiqueta p a traves del 
+
+
+	TEXTO INTERNO :::
+
+	Asigno SETTER:
+	p[0].innerText = "Texto"
+
+	Obtengo GETTER:
+	let texto = p[0].innerText
+
+	HTML INTERNO :: 
+	Asigno SETTER:
+	p[0].innerHTML = "<span>Texto</span>"
+
+	Obtengo GETTER:
+	let span = p[0].innerHTML
+
+	HTML EXTERNO :: 
+	Asigno SETTER:
+	p[0].outerHTML = "<p>Mi nombre es Alex</p>"
+
+	Obtengo GETTER:
+	let htmlExterno = p[0].outerHTML
+
+EJERCICIO 3:
+Escribir apellido en una etiqueta <p>Hola Alex [[apellido]] </p> mediante el click en un botón.
+
+	1. Que quiere decir: [[apellido]] ? 
+		- Utilizar alguna etiqueta "comodin" dentro de la etiqueta "p" para agregar el valor del apellido que esta asignado como una variable en memoria.
+		- Utilizamos "span" como etiqueta comodin
+
+		<p>Hola Alex <span id="apellido"></span> </p>
+
+		- Definir el apellido en una variable
+		- Funcion que al dar clic remplaze el valor de la etiqueta span por el apellido cargado en memoria
+
+EJERCICIO 4: 
+
+Desplegar una lista con productos: Manzana, Pera, Ajo en un HTML ul, li en un div id="resultado" al dar click en un boton "Ver lista"
+
+	1. Dos dificultades: 
+		- Defino lista de productos como un array
+			- Voy a tener que construir el HTML
+			
+		- Defino lista de productos como un HTML UL, LI
+			- Solo creo el HTML estatico en el JS

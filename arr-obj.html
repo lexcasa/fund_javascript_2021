@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>	</title>
+</head>
+<body>
+
+		<script type="text/javascript">
+			let fields = {
+			   fields: {
+			      startDate: "26/04/2016",
+			      readjustmentDate: "01/07/2014",
+			      endDate: "25/04/2021"
+			   },
+			   sublists: {
+			      tenants: {
+			         7: {
+			            fields: {
+			               customer:107,
+			               percent: 0.5,
+			               startDate: "2016-04-26T07:00:00.000Z",
+			               endDate: "2021-04-25T07:00:00.000Z"
+			            }
+			         },
+			         8: {
+			            fields: {
+			               customer:97,
+			               percent: 0.5,
+			               startDate: "2016-04-26T07:00:00.000Z",
+			               endDate: "2018-04-25T07:00:00.000Z"
+			            }
+			         },
+			         9: {
+			            fields: {
+			               customer:102,
+			               percent: 0.25,
+			               startDate: "2018-04-26T07:00:00.000Z",
+			               endDate: "2021-04-25T07:00:00.000Z"
+			            }
+			         },
+			         10: {
+			            fields: {
+			               customer:96,
+			               percent: 0.25,
+			               startDate: "2018-04-26T07:00:00.000Z",
+			               endDate: "2021-04-25T07:00:00.000Z"
+			            }
+			         }
+			      },
+			      stepUpLease: {
+			         106: {
+			            fields: {
+			               baseRentAmount: 4275,
+			               baseRentIndex: 7
+			            },
+			            sublists: {
+			               fixedCharge: {
+			                  5: {
+			                     fields: {
+			                        charge: 105,
+			                        amount: 5
+			                     }
+			                  }
+			               },
+			               baseRentIncrementJoin: {
+			                  1: {
+			                     fields: {
+			                        month: 12,
+			                        percentage: 100
+			                     }
+			                  }
+			               }
+			            }
+			         },
+			         107: {
+			            fields: {
+			               baseRentAmount: 5130,
+			               baseRentIndex: 2
+			            },
+			            sublists: {
+			               baseRentIncrementJoin: {
+			                  1: {
+			                     fields: {
+			                        month: 12,
+			                        percentage: 100
+			                     }
+			                  }
+			               }
+			            }
+			         },
+			         108: {
+			            fields: {
+			               baseRentAmount: 6412.5,
+			               baseRentIndex: 2
+			            },
+			            sublists: {
+			               fixedCharge: {
+			                  3: {
+			                     fields: {
+			                        charge: 106,
+			                        amount: 500
+			                     }
+			                  }
+			               },
+			               baseRentIncrementJoin: {
+			                  1: {
+			                     fields: {
+			                        month: 12,
+			                        percentage: 100
+			                     }
+			                  }
+			               }
+			            }
+			         },
+			         109: {
+			            fields: {
+			               baseRentAmount: 7267.5,
+			               baseRentIndex: 2
+			            },
+			            "sublists": {}
+			         }
+			      },
+			      temporaryCondition: {
+			         102: {
+			            fields: {
+			               baseRentAmount: 7267.5,
+			               baseRentIndex: 2
+			            },
+			            sublists: {
+			               fixedCharge: {
+			                  4: {
+			                     fields: {
+			                        charge: 105,
+			                        amount: 2000
+			                     }
+			                  }
+			               },
+			               baseRentIncrementJoin: {
+			                  2: {
+			                     fields: {
+			                        month: 6,
+			                        percentage: 50
+			                     }
+			                  },
+			                  3: {
+			                     fields: {
+			                        month: 12,
+			                        percentage: 50
+			                     }
+			                  }
+			               }
+			            }
+			         }
+			      },
+			      billingDays: {
+			         T: {
+			            fields: {
+			               "custrecord_pslad_fpe_vcto_empreendimento": [],
+			               custrecord_pslad_fpe_vcto_dia: "5",
+			               custrecord_pslad_fpe_vcto_verbas: [
+			                  {
+			                     value: "6",
+			                     text: "Água"
+			                  },
+			                  {
+			                     value: "105",
+			                     text: "Aluguel Mínimo Mensal"
+			                  },
+			                  {
+			                     value: "106",
+			                     text: "Ar Cond."
+			                  },
+			                  {
+			                     value: "107",
+			                     text: "Encargos Comuns"
+			                  },
+			                  {
+			                     value: "108",
+			                     text: "Encargos Específicos"
+			                  },
+			                  {
+			                     value: "109",
+			                     text: "Energia"
+			                  },
+			                  {
+			                     value: "110",
+			                     text: "FPP"
+			                  },
+			                  {
+			                     value: "111",
+			                     text: "Gás"
+			                  },
+			                  {
+			                     value: "112",
+			                     text: "IPTU"
+			                  },
+			                  {
+			                     value: "2",
+			                     text: "Outros Encargos"
+			                  },
+			                  {
+			                     value: "3",
+			                     text: "Seguros"
+			                  },
+			                  {
+			                     value: "4",
+			                     text: "Serviços"
+			                  }
+			               ],
+			               custrecord_pslad_fpe_vcto_contrato: [
+			                  {
+			                     value: "313",
+			                     text: "Ejemplo FRD General"
+			                  },
+			                  {
+			                     value: "314",
+			                     text: "Ejemplo TDD"
+			                  }
+			               ]
+			            }
+			         },
+			         F: {
+			            fields: {
+			               custrecord_pslad_fpe_vcto_empreendimento: [
+			                  {
+			                     value: "2",
+			                     text: "Shopping Cerrado"
+			                  }
+			               ],
+			               custrecord_pslad_fpe_vcto_dia: "1",
+			               custrecord_pslad_fpe_vcto_verbas: [
+			                  {
+			                     value: "105",
+			                     text: "Água"
+			                  },
+			                  {
+			                     value: "106",
+			                     text: "Aluguel Mínimo Mensal"
+			                  },
+			                  {
+			                     value: "107",
+			                     text: "Ar Cond."
+			                  },
+			                  {
+			                     value: "108",
+			                     text: "Encargos Comuns"
+			                  },
+			                  {
+			                     value: "109",
+			                     text: "Encargos Específicos"
+			                  },
+			                  {
+			                     value: "110",
+			                     text: "Energia"
+			                  },
+			                  {
+			                     value: "111",
+			                     text: "FPP"
+			                  },
+			                  {
+			                     value: "112",
+			                     text: "Gás"
+			                  },
+			                  {
+			                     value: "2",
+			                     text: "IPTU"
+			                  },
+			                  {
+			                     value: "3",
+			                     text: "Outros Encargos"
+			                  },
+			                  {
+			                     value: "4",
+			                     text: "Seguros"
+			                  },
+			                  {
+			                     value: "6",
+			                     text: "Serviços"
+			                  }
+			               ],
+			               "custrecord_pslad_fpe_vcto_contrato": []
+			            }
+			         }
+			      }
+			   },
+			   relatedRecords: {
+			      "fields": {},
+			      sublists: {
+			         indeces: {
+			            7: {
+			               "fields": {},
+			               sublists: {
+			                  indexQuotations: {
+			                     "07-2014": {
+			                        fields: {
+			                           quotation: 905.2047
+			                        }
+			                     },
+			                     "07-2015": {
+			                        fields: {
+			                           quotation: 985.022
+			                        }
+			                     },
+			                     "07-2016": {
+			                        fields: {
+			                           quotation: 1079.9456
+			                        }
+			                     },
+			                     "07-2017": {
+			                        fields: {
+			                           quotation: 1102.6907
+			                        }
+			                     },
+			                     "07-2018": {
+			                        fields: {
+			                           quotation: 1132.9828
+			                        }
+			                     },
+			                     "07-2019": {
+			                        fields: {
+			                           quotation: 1175.7122
+			                        }
+			                     },
+			                     "07-2020": {
+			                        fields: {
+			                           quotation: 1207.8928
+			                        }
+			                     }
+			                  }
+			               }
+			            }
+			         }
+			      }
+			   }
+			}
+		console.log("fields: ", fields)
+
+		let sublists = fields.sublists.stepUpLease
+		let arrSublists = []
+
+		for (let key in sublists){
+			arrSublists.push(sublists[key])
+		}
+
+		console.log("sublists: ", sublists)
+		console.log("res: ", arrSublists)
+
+		const Sublist = function (sublists) {
+			return {
+				stepUpLease: function (){
+					let arrSublists = []
+					for (let key in sublists){
+						arrSublists.push(sublists[key])
+					}
+					return arrSublists
+				}
+			}
+		}
+	</script>
+</body>
+</html>

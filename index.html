@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		// Metodos basicamente son funciones
+		// Dos tipos de funciones: 
+			// - Funciones con Retorno
+			// - Funciones de ejecucion
+		// Funciones con retorno: 
+		// Devuelven un resultado almacenable
+		// - Guardar lo que procesa esa funcion dentro de una variable
+		// f(x) = x + 1
+		// x = 1 -> Nuestra funcion f(1) = 1 + 1 -> f(1) = 2
+		// El resultado almacenable es "2"
+
+		let f_x = function (x){
+			return x + 1
+		}
+		// Voy a invocar la funcion f_x(1)
+		let grafico = f_x(1)
+		// f(1) = 1 + 1 = 2
+		console.log("grafico :: ", grafico)
+
+		// PROBLEMA FUNCION SUMA
+		// Suma = a + b
+		// 2 + 5 = 7
+
+		let suma = function (a,b){
+			return a + b
+		}
+		let resutlado = suma(2, 5)
+		console.log("Resultado suma :: ", resutlado)
+
+		// PROBLEMA: Funcion de ejecucion
+		// La funcion despliegue mi nombre en la consola 
+		let muestraNombre = function (){
+			let nombre = "Alex Casadevall"
+			console.log("Mi nombre :: ", nombre)
+		}
+		// Ejecutar la funcion en el codigo
+		muestraNombre()
+
+		// Est. de Datos
+		// Arrays y objetos
+		// Objetos
+			// - Abstraer conceptos reales en propiedades y valores
+
+		// Quiero hacer un software para almacenar usuarios
+		// Tengo que definir que es un usuario para mi software 
+		// - Cond. necesarias y suficientes para que usuario este representado en el sistema
+		// - Obj del sistema 
+
+		// Obj. del sistema: Sistema de proveedores 
+		// Usuario: (nombre, direccion, RUT, telefono, email, razonSocial)
+		let usuario = {
+			nombre: "Alex",
+			direccion: "Arenal Grande",
+			rut: "23123213213",
+			telefono: 200000,
+			email: "alex@lexartlabs.com",
+			razonSocial: "LEXART LABS SRL"
+		}
+
+		// PROBLEMA: Sistema para veterinarias
+		// Cond. necesaria y suficiente para una mascota
+		// mascota: (nombre, tipo, raza, matricula, edad, vacunas)
+		let mascota = {
+			nombre: "Bobby",
+			tipo: "perro",
+			raza: "Border Colie",
+			matricula: 123213213,
+			edad: 8,
+			vacunas: 4
+		}
+
+	</script>
+</body>
+</html>

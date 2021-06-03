@@ -1,0 +1,55 @@
+- Ingenieria de Software - WebApps 
+
+	- FrontEnd JS
+		- Vistas (Views)
+		- Logica (Model/API)
+		- Integracion (Controllers)
+
+
+		< LOGICA > <--| INTEGRACION |--> < VISTA >
+
+	PROBLEMA: Voy a escribir mi nombre en un input y al dar clic en "guardar" me tiene que aparecer el nombre que escribi en una etiqueta <p>
+
+		- VISTA: input, boton guardar, etiqueta p (x)
+		- LOGICA: Almacenar el nombre en una variable y mostrar en otro lado (x)
+		- INTEGRACION: 
+			- clic en "guardar" ---> Evento (evento clic)
+			- muestro en la etiqueta <p> de forma dinamica 
+
+	RESOLVER EL PROBLEMA POR PARTES !!
+
+		1. Arrancamos por la VISTA
+		2. Programamos la LOGICA 
+			2.1 Probamos bien la LOGICA
+		3. integramos evento por evento
+			3.1 Integramos el CLIC
+			3.2 Integramos la interaccion de la variable local con la etiqueta p
+
+	LOGICA: Almacenar el nombre en una variable y mostrar en otro lado
+		- Crear una funcion que acepta un parametro de tipo string
+		- Luego ejecuta en un console.log
+
+	INTEGRACION: 
+			- clic en "guardar" ---> Evento (evento clic)
+			- muestro en la etiqueta <p> de forma dinamica 
+
+	< HTML > <-- document --> < JS >
+
+	Traigo el HTML para dentro del JS a traves del OBJ: document 
+
+	PROBLEMA 2: Ingresar una lista de personas que se van a vacunar y verificar si son mayores de edad (mayor o igual a 18)
+
+		- VISTA (x): 
+			documento: input (type=text), 
+			edad: input (type=number),
+			boton: guardar,
+			lista: ul, li
+
+		- LOGICA (x): 
+			- Almacenar la persona, que va a ser un objeto dentro de un array 
+			- Verificar si la persona que estoy almacenado es mayor a 18
+
+		- INTEGRACION:
+			- Clic en guardar
+			- Verificamos la edad, si no tiene 18 entonces que le aparezca un alerta 
+			- Listar en el HTML las personas guardadas

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<p>Mi nombre es Alex</p>
+	<div id="resultado"></div>
+
+	<script type="text/javascript">
+		let p = document.getElementsByTagName('p')
+		// Aca me obtengo la etiqueta completa
+		// La guardo en memoria
+		let pHTML = p[0].outerHTML;
+
+		let div = document.getElementById('resultado')
+		// No es div[0] por que estamos obteniendo el elemnto por ID
+		// Y la ID es unica en el HTML
+		div.innerHTML = pHTML
+
+		console.log("Verificar el HTML del P: ", pHTML)
+	</script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		let nombre = "Hola mundo" // Variable de tipo: string
+		let edad   = 29 		  // Variable de tipo: int
+		let altura = 1.91 		  // Variable de tipo: float 
+		let esCasado = false      // Variable de tipo: bool [true, false]
+
+		let lista 	= [1, 2, 3, 4] // Variable de tipo: array 
+		
+		let persona = {
+			nombre: "Alex", 
+			apellido: "Casadevall"
+		}
+		// Variable de tipo: Object
+
+		let suma = function (a, b) {
+			return a + b;
+		}
+		// Variable de tipo: function 
+
+
+		// Logica 
+		// PROBLEMAS 
+		// Condicionales logicas
+		// 
+		// COND. LOGICAS Aritmeticas 
+		// >, <, >=, <=, ==, ===
+
+		// PROBLEMA: Verificar si el usuario es mayor de edad
+		const MAYOR_EDAD = 18
+		let esMayor = edad >= MAYOR_EDAD // 29 >= 18 ?
+		console.log("Verifico si es mayor de edad ::", esMayor)
+
+		// COND. LOGICAS con OP. LOGICOS 
+		// AND, OR, NOT
+
+		// PROBLEMA 2: Dar de alta un formulario de registro X motivo 
+		// necesitamos que el usuario cumpla las siguientes condiciones:
+		// - Que este casado 
+		// - Sea mayor de edad
+		// CUMPLIR LAS DOS COND. EN SIMULTANEO
+
+		let altaFormulario = esMayor && esCasado // esMayor: true
+												 // esCasado: false
+												 // altaFormulario? -> false
+		console.log("Se puede dar de alta el formulario? ", altaFormulario)
+
+		// PARA QUE LA ALTA DE FORMULARIO SEA TRUE "esMayor" Y "esCasado" tienen que ser TRUE en simultaneo
+
+		// PROBLEMA 3: Para vacunarme del COVID necesito presentar documento o pasaporte. Si tengo cualquiera de los dos me puedo vacunar
+		let tieneCI = false
+		let tienePasaporte = true 
+
+		let habilitaVacunacion = tieneCI || tienePasaporte
+
+		console.log("El usuario puede vacunarse? ", habilitaVacunacion)
+
+		// PROBLEMA 4: Estoy habilitado para viajar a Brasil si: Tengo pasaporte o cedula, tengo pasaje y la vacuna de COVID
+
+		let tienePasaje = false
+		let tieneVacuna = true
+		let puedoViajar = (tieneCI || tienePasaporte) && tienePasaje && tieneVacuna 
+
+		console.log("El usuario puede viajar? ", puedoViajar)
+
+	</script>
+</body>
+</html>

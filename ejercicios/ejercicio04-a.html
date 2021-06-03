@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id="resultado"></div>
+	<button onclick="asignoLista()">Ver lista</button>
+	<script type="text/javascript">
+		let lista = `
+			<ul>
+				<li>Manzana</li>
+				<li>Pera</li>
+				<li>Ajo</li>
+			</ul>
+		`
+		let div = document.getElementById('resultado')
+
+		let asignoLista = function () {
+			// Asignar la lista al HMTL interno del div
+			div.innerHTML = lista
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<!-- Creo un HTML resultante con la etiqueta comodin para asignar el valor del apellido ahi -->
+	<p>Hola Alex <span id="apellido"></span> </p>
+	<!-- 
+		- Creo un boton que a traves del evento "onclick" va a disparar la funcion "asignarApellido" 
+		- La funcion "asignarApellido" va asignar el innerText de la etiqueta comodin seleccionada 
+		  con el apellido guardado en memoria
+	-->
+	<button onclick="asignarApellido()">Mostrar apellido</button>
+	<script type="text/javascript">
+		// Defino el apellido guardado en memoria
+		let apellido = "Casadevall"
+		// Obtengo la etiqueta commodin por su ID
+		// y la manipulo desde el JS
+		let span = document.getElementById('apellido')
+
+		// Creo la funcion asignarApellido
+		let asignarApellido = function () {
+			// Vinculo el texto interno de la etiqueta commodin
+			// Con el apellido en memoria
+			span.innerText = apellido
+		}
+	</script>
+</body>
+</html>

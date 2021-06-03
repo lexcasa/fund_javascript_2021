@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id="resultado"></div>
+	<button onclick="asignoLista()">Ver lista</button>
+	<script type="text/javascript">
+		let frutas = ["Manzana", "Pera", "Ajo"]
+
+		// Construyo el HTML
+		// Crear la etiqueta template
+		let ul = ``
+
+		// Recorrer frutas
+		// almacenar en un template <li>...</li>
+
+		let asignoLista = function () {
+			let li = ``
+			
+			// Creando un template de forma dinamica
+			for (let i = 0; i < frutas.length; i++){
+				let fruta = frutas[i]
+
+				// Si i = 0, frutas[i]: furtas[0] - "Manzana"
+				// Si i = 1, frutas[i]: furtas[1] - "Pera"
+				// Si i = 2, frutas[i]: furtas[2] - "Ajo"
+
+				// Construir el <li> con los valores de fruta (que es la variable)
+				li += `
+					<li>${fruta}</li>
+				`
+			}
+			console.log("li: ", li)
+			/*
+				Resultado esperado:
+				<li>Manzana</li><li>Pera</li><li>Ajo</li>
+			*/
+		}
+	</script>
+</body>
+</html>

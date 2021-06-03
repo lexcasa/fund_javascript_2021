@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		// Iteracion: Es recorrer una estructura de datos
+		// Que puede ser: array y/o un objeto
+
+		// PROBLEMA: Quiero saber el alumno que es mayor de edad de un salon de clase
+		// - Como identifico un conjunto de alumnos en una est. de datos? 
+		// - Como recorro los alumnos 1 a 1 hasta encontrar el mayor de edad?
+
+		const MAYOR_EDAD = 18
+		let alumnos = [10, 15, 24, 11, 18]
+		let cantAlumnos = alumnos.length // el largo de los alumnos en la lista
+
+		// 1. pos inicial
+		// 2. Cond de corte 
+		// 3. Step 
+
+
+		// Cantidad total de alumnos: 4
+		// La max posicion del array de alumnos: 3
+		// Como accedo a un elemento de un array, es a traves de la notacion: array[indice]
+		for(let i = 0; i < cantAlumnos; i++){
+
+			console.log("Alumno edad :: ", alumnos[i]) 
+			// Vuelta 1: alumnos[0] = 10
+			// Vuelta 2: alumnos[1] = 15
+			// Vuelta 3: alumnos[2] = 11
+			// Vuelta 4: alumnos[3] = 18
+
+			// 
+			if(alumnos[i] >= MAYOR_EDAD){
+				console.log("Es mayor de edad: ", alumnos[i], i)
+			}
+		}
+
+		// EJERCICIO 1: Cual es el menor alumno de la lista 
+		// EJERCICIO 2: Cual es el mayor alumno de la lista
+
+
+		// PROBLEMA 2: Quiero mostrar en pantalla todos los autos que son de modelo mayor o igual a 2000.
+		// Y los autos que tienen modelo menor a 2000 marcar con una "X"
+
+		// Resultado esperado: 
+		// Auto 0 2000
+		// Auto 1 2001
+		// Auto 2 x
+		// Auto 3 2002
+		// Auto 4 x
+		// Auto 5 x
+
+		const MAYOR_MODELO = 2000
+		let autos = [2000, 2001, 1998, 2002, 1999, 1991]
+		let cantAutos = autos.length
+
+		for (let i = 0; i < cantAutos; i++){
+			if(autos[i] >= MAYOR_MODELO){
+				console.log("Auto ", i, " " ,autos[i])
+				// Auto 0 2000
+			} else {
+				console.log("Auto ", i, " x")
+				// Auto 2 x
+			}
+		}
+
+		// PROBLEMA 3: Queremos solo los autos del 1998
+		// Si el auto es mayor a 1998 que marque con una "N"
+		// Si el auto es menor a 1998 que marque con una "x"
+		// Si el auto es del 1998 que marque: Auto 2 1998
+
+		const ES_1998 = 1998
+
+		for (let i = 0; i < cantAutos; i++){
+			if(autos[i] > ES_1998){
+				console.log("Auto ", i, " N")
+				// Auto 0 N
+			} else if (autos[i] == ES_1998){
+				console.log("Auto ", i, " " ,autos[i])
+				// Auto 2 1998
+			} else {
+				console.log("Auto ", i, " x")
+				// Auto 5 x
+			}
+		}
+
+
+	</script>
+</body>
+</html>

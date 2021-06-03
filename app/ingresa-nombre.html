@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div>
+		<input type="text" name="nombre" placeholder="Mi nombre">
+		<button onclick="obtengoNombre()">Guardar</button>
+		<p></p>
+	</div>
+	<script type="text/javascript">
+		let p = document.getElementsByTagName('p')[0]
+
+		let mostrarNombre = function (miNombre){
+			console.log("Mi nombre es: ", miNombre)
+		}
+
+		let obtengoNombre = function (){
+			// Con esto obtenemos el valor del input
+			let miNombre = document.getElementsByName('nombre')[0].value
+
+			// Le asigno el valor al "p" dentro de la ejecucion de la funcion 
+			p.innerText = miNombre
+			// Puede ser un p.innerHTML 
+
+			console.log("Nombre en el input: ", miNombre)
+		}
+		
+		// TEST
+		// Voy a escribir mi nombre al ejecutar la funcion
+		mostrarNombre("Alex Casadevall")
+	</script>
+</body>
+</html>
