@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<ul>
+		<li class="producto">Manzana</li>
+		<li class="producto">Pera</li>
+		<li class="producto">Ajo</li>
+	</ul>
+	<ul>
+		<li>Boby</li>
+	</ul>
+	<div id="resultado"></div>
+	<script type="text/javascript">
+		// querySelectorAll para mas de un elemento
+		// querySelector para un elemento solo
+		let items 		= document.querySelectorAll('.producto') // .producto: Corresponde a la clase
+		let resultado 	= document.querySelector('#resultado') // #resultado: corresponde a la id
+
+		let clickProducto = function () {
+			// console.log("Funciona!", this.innerText)
+			resultado.innerText = this.innerText
+		}
+
+		// event Listener
+		for (let i = 0; i < items.length; i++) {
+			// A c/elemento le agregamos un listener
+			items[i].addEventListener('click', clickProducto)
+			// Si i = 0, items[i] - items[0]: <li class="producto">Manzana</li>
+			// Cuando agrego el addEventListener para i = 0
+			// (<li class="producto">Manzana</li>).addEventListener("click", clickProducto)
+			//	
+			//	Dentro de: clickProducto el "this" hace referencia a la etiqueta que cliquee
+			//  Entonces el this -> hace referencia a: <li class="producto">Manzana</li>
+			// 	Si quiero el texto de: <li class="producto">Manzana</li> 
+			//  Lo unico que hago es: this.innerText
+		}
+
+		console.log("items: ", items)
+
+	</script>
+</body>
+</html>

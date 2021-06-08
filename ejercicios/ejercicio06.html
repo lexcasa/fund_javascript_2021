@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<ul>
+		<li class="producto">Manzana</li>
+		<li class="producto">Pera</li>
+		<li class="producto">Ajo</li>
+	</ul>
+	<input type="text" id="resultado">
+	<button onclick="agregarTexto()">Agregar</button>
+	<div id="resultado2"></div>
+
+	<script type="text/javascript">
+		let items 		= document.querySelectorAll('.producto')
+		let resultado 	= document.querySelector('#resultado')
+		let resultado2  = document.querySelector('#resultado2')
+
+		let clickProducto = function () {
+			// Cuando trabajo con etiquetas de input
+			// No tengo innerHTML, no tengo innerText
+			// El input de datos es value
+			resultado.value = this.innerText
+		}
+
+		for (let i = 0; i < items.length; i++) {
+			items[i].addEventListener('click', clickProducto)
+		}
+
+		let agregarTexto = function (){
+			// El valor del input en ESE MOMENTO
+			let valor = resultado.value
+			let p     = `<p>${valor}</p>`
+
+			resultado2.innerHTML += p
+		}
+	</script>
+</body>
+</html>
