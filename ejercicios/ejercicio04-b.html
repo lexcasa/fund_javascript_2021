@@ -7,7 +7,8 @@
 	<div id="resultado"></div>
 	<button onclick="asignoLista()">Ver lista</button>
 	<script type="text/javascript">
-		let frutas = ["Manzana", "Pera", "Ajo"]
+		let frutas = ["Manzana", "Pera", "Ajo", "Zapallo", "Tomate"]
+		let div    = document.getElementById('resultado')
 
 		// Construyo el HTML
 		// Crear la etiqueta template
@@ -37,6 +38,17 @@
 				Resultado esperado:
 				<li>Manzana</li><li>Pera</li><li>Ajo</li>
 			*/
+
+			// Cargar el UL
+			// <ul> ... </ul>
+
+			ul = `
+				<ul>${li}</ul>
+			`
+			// Verifico que el HTML este bien formado
+			console.log("ul, li: ", ul)
+
+			div.innerHTML = ul
 		}
 	</script>
 </body>
