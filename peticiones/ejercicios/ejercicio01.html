@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- Libreria AXIOS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+	<p id="resultado"></p>
+	<button onclick="mostrarMensaje()">Mostrar mensaje</button>
+	<button onclick="mostrarMensajeAxios()">Mostrar mensaje Axios</button>
+	<!-- Llamamos el servicio de forma externa -->
+	<script type="text/javascript" src="servicio01.js"></script>
+	
+	<script type="text/javascript">
+		// t=1
+		let resultado = document.querySelector("#resultado")
+		
+		// t=i
+		let mostrarMensaje = function () {
+			let mensaje = ServicioMensaje.obtenerMensaje() // { texto: "Hola Mundo" }
+			resultado.innerText = mensaje.texto;
+		}
+		
+		// t=1
+		const archivo = 'http://localhost:8080/mensaje.json'
+		
+		let msjServer = {}
+
+		// t=delta
+		axios.get(archivo).then( function (data){
+			// t= delta + 1
+			
+			msjServer = data.data;
+			console.log("msjServer interno: ", msjServer.texto)
+
+			// Todo el codigo que quiera programar que utilice el data
+			// Tengo que programar dentro de la instancia del axios
+
+		})
+
+		let mostrarMensajeAxios = function () {
+			let mensaje = ""
+
+			axios.get(archivo).then( function (data){
+				// t= delta + 1
+				
+				// variable = [data: es de la funcion][data: viene del axios][texto: es una propiedad de nuestro json]
+				mensaje = data.data.texto;
+
+				// Todo el codigo que quiera programar que utilice el data
+				// Tengo que programar dentro de la instancia del axios
+				resultado.innerText = mensaje;
+			}).catch( function (error){
+				console.log("error: ", error)
+				alert("Error: Sin conexion.")
+			})
+		}
+
+		console.log("msjServer externo: ", msjServer.texto)
+
+		// t=2
+		console.log("hola !")
+
+	</script>
+</body>
+</html>

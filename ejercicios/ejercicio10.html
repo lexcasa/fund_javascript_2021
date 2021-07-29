@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id="resultado"></div>
+	<button onclick="activarRender('div','div')">Obtener resultado</button>
+	<script type="text/javascript">
+		let persona = {
+			nombre: "Alex",
+			apellido: "Casadevall"
+		}
+
+		let render = function (obj, etiquetaIn, etiquetaOut) {
+			
+			let todaMascota = obj.nombre + "," + obj.tipo + "," + obj.edad
+			let templateIn = `<${etiquetaIn}> ${todaMascota} </${etiquetaIn}>`
+
+			let templateOut = `
+				<${etiquetaOut}> ${templateIn} </${etiquetaOut}>
+			`
+			// Si etiquetaOut: div
+			// templateOut: <div><span>Alex</span><span>Casadevall</span></div>
+
+			let resultado = document.querySelector('#resultado')
+			resultado.innerHTML = templateOut
+		}
+
+		let activarRender = function (etiquetaIn, etiquetaOut){
+			render(persona, etiquetaIn, etiquetaOut)
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+1) Crear un servicio que obtenga los datos de un archivo settings.json con el formato:
+	{
+		"mensaje":"Hola Mundo"
+	}
+E imprima en pantalla.
+
+- NUEVAS: 
+	- Comunicacion con Servidor (x)
+	- Crear un servicio (x)
+	- Obtener datos de un archivo (x)
+	- Volcar los datos a una variable de JS
+	- Que es JSON?
+
+- YA SABEMOS: 
+	- Mostrar en pantalla
+
+
+
+SERVICIOS: 
+
+	- Abstrae lo que "viene" de forma externa y llega a nuestra app javascript
+		- Lo que "viene": Una petición ida - vuelta
+		- de forma externa: Está en un servidor (o es un archivo estático)
+		- Comunicar con nuestro JS
+
+
+	- COMO SE COMUNICA UNA APP JS CON UN SERVIDOR
+		- Lo hace a través del HTTP
+
+		- HTTP: Es un protocolo hypertext transfer protocol
+			- Es basicamente como funciona la web de hoy
+			- Cuando escribimos: http://url.com
+				- Es una petición de tipo GET
+				- GET: voy a buscar en el servidor la información de una URL
+				- Y esa data se vuelca en el navegador como un HTML
+
+		HTTP: 
+			- GET: Obtengo información
+				- API 
+				- Archivos estáticos:
+					- Pero los archivos estaticos deben estar servidos en un servidor web
+					- .txt
+					- .json
+					- etc
+
+			- POST: Creo información
+			- PUT: Actualizo la información
+			- DELETE: Elimino la información
+
+	Que es un servidor WEB? 
+		- Infraestructura preparada para trasmitir información a través de HTTP
+
+		EJEMPLO: 
+			GET - INGRESO A FACEBOOK:
+
+			- (GET) Ingreso en la barra de direcciones: 
+				https://facebook.com
+				- Estoy usando el protocolo HTTP Seguro (por que es https) para obtener información del servidor de facebook 
+				- Esto se traduce como la pagina de inicio
+					- Que nos devuelve un documento HTML
+						- HTML, CSS, JS
+				Obs: Es una petición de tipo GET
+			----- 
+
+			POST - REGISTRO UN USUARIO EN FACEBOOK: 
+
+			- Voy al formulario de registro
+			- Ingreso: https://facebook.com/register petición de tipo GET
+			- Completo los datos del formulario
+			- (POST) Le doy clic en "Registrar"
+				- Enviar todos estos datos contra una API de facebook
+				- Como es por primera vez 
+				- Envia una petición de tipo POST con los datos del formulario
+			---- 
+
+
+			PUT - EDITAR PERFIL DE USUARIO EN FACEBOOK: 
+
+			- Una vez logueado, voy a mi perfil
+			- Ingreso: https://facebook.com/me -> peticion GET
+			- Edito los datos en el formulario
+			- (PUT) Le doy "Guardar"
+				- Envia todos los datos contra una API 
+				- Pero el usuario ya existe
+				- Envia una peticion de tipo PUT 
+			--- 
+
+			DELETE - ELIMINAR UN COMENTARIO
+
+			- Tengo comentarios en una publicacion 
+			- Doy clic en "eliminiar"
+				- Envia una peticion de tipo DELETE a la API, con el identificador del comentario
+			---- 
+
+				S: "Muy bueno!", ABC1234
+				A: "Muy bueno!", ABC1111
+
+
+	EJEMPLO GET: w3school.com
+
+	HEADERS: 
+
+		Request URL: https://www.w3schools.com/
+		Request Method: GET
+		Status Code: 200 
+		Remote Address: 192.229.173.207:443
+
+	- Request URL: Donde hicimos la peticion
+	- Request Method: El metodo HTTP que utilizamos para la peticion
+	- Status Code: Que nos respondio el servidor sobre esa peticion
+		
+		200: OK, encontro algo
+		Si encontro algo el servidor me responde con datos
+
+		--- 
+		Error conocido:
+		404: Not found
+
+	- Remote Address: la IP del servidor
+		IP:Puerto
+
+		HTTPS -> Por lo general sale por el puerto 443
+		HTTP  -> Por lo general sale por el puerto 80
+
+SERVICIOS EN JS: 
+
+ 	- Abstraccion del modelo a traves de una coleccion de funciones en JavaScript
+
+ 	Modelo: 
+
+ 	{
+ 		mensaje: "Hola mundo"
+ 	}
+
+ 	Voy a tener una funcion que el resultado de la funcion es el objeto
+
+ 	ServicioMensaje.obtenerMensaje() -> { mensaje: "Hola Mundo"}
+ 	ServicioMensaje.obtenerMensaje() -> { mensaje: "Hola Mundo", "dia":"Lunes"}
+
+
+
+Obtener datos de un archivo
+
+	- Servidor web donde voy a correr ejercicio01.html
+	- Pre-requisitos: 
+		- instalar nodejs
+			- instalar npm
+				https://nodejs.org/es/
+
+	- Consola powershell
+	- Comandos
+		- cd 
+			- Como movernos en directorio
+			- VOLVER PARA ATRAS: cd ..
+			- IR A DIRECTORIO: cd directorio 
+		- ls 
+			- Listo las carpetas en donde estoy parado
+	- Instalar el http-server 
+		npm i -g http-server
+
+	- Correr servidor web:
+		http-server -p 8000 -c-1
+
+	URL: http://localhost:8000/ejercicio1.html
+
+	HAGO UN GET: http://localhost:8000/mensaje.json

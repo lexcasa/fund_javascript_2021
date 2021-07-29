@@ -1,0 +1,22 @@
+7. Crear un input de tipo text y botón: 
+Agregar texto a una lista ul,li c/vez que se pulsa el botón 
+
+---
+Agregar un botón al lado de c/elemento de la lista con el texto: "Eliminar" 
+Al pulsar "Eliminar": Remover elemento de la lista 
+
+---
+No permitir textos repetidos
+		- Lista ejemplo:
+
+			* Manzana [Eliminar]
+			* Naranja [Eliminar]
+---- 
+
+
+
+
+1. VISTA
+2. LOGICA
+3. INTEGRACION
+

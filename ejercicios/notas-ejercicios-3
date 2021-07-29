@@ -1,0 +1,41 @@
+EJERCICIO 9 - Numero aleatorios
+
+let vector = [1,3,5,10,20]
+
+	- Lo que queremos del vector es el elemento de forma aleatoria
+	- Como pido el elemento del vector: 
+		- A traves del indice: 
+			let v_posicion = [0, 1, 2, 3, 4]
+
+			f_random(v_posicion) = 0, 2, 3, 4, 1, 0 
+
+			// 
+
+EJEMPLO SORTEO ALUMNOS: 
+
+	let alumnos = ["Alex", "Seba", "Juan", "Pedro"]
+	let alumnos_pos = [0,1,2,3]
+
+	let pos = f_random(alumnos_pos) = 2
+
+	alumnos[ pos ] -> alumnos[2] -> "Juan"
+
+
+- Para construir la f_random tengo que saber como generar numeros aleatorios
+- Generar numeros aleatorios: Math.random
+	- [0, 1]
+
+
+- Tengo 6 elementos, son 5 posiciones
+- 1 * [0, 1] - 0,5
+- 1 * 0,5
+	-> 0,5: [0,5]
+- 5 * [0, 1]
+	-> 0,5 -> 5 * 0,5 -> 2,5 
+	0,8
+
+- 5 * [0,1] -> nunca va a llegar a 5, siempre va a quedar cerca.
+- Redondear el resultado de 5 * [0, 1]
+
+
+

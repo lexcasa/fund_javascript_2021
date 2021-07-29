@@ -1,0 +1,53 @@
+10. Crear una función render donde los parámetros de entrada sea un objeto, que elemento quiero de HTML y el elemento para insertar: 
+  		- render(persona, 'tr', 'tbody')
+  			Objeto: persona
+  			estructura: tr
+  			Inserta en: tbody
+
+  			...
+  			<tbody>
+  				<tr>
+  					<td>Alex</td>
+  					<td>Casadevall</td>
+  				</tr>
+  			</tbody>
+
+  			---
+  			<div>
+  				Alex Casadevall
+  			</div>
+Referencia: https://www.w3schools.com/js/js_loop_for.asp
+Referencia: https://www.w3schools.com/js/js_objects.asp
+
+
+- Un parametro de entrada: 
+  - Objeto
+  - li
+  - ul
+
+  let persona = {
+    nombre: "Alex",
+    apellido: "Casadevall"
+  }
+
+  Objeto: Persona 
+  etiquetaIn: li
+  etiquetaOut: ul
+
+  <ul>
+    <li>Alex</li>
+    <li>Casadevall</li>
+    ...
+  </ul>
+
+
+  - Objeto: persona
+  - etiquetaIn: span
+  - etiquetaOut: div
+
+
+  <div>
+    <span>Alex</span>
+    <span>Casadevall</span>
+    ...
+  </div>

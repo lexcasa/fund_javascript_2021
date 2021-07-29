@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h2>Sorteo de alumnos - PS5</h2>
+	<div id="resultado"></div>
+	<button onclick="sorteo()">Sortear</button>
+	<script type="text/javascript">
+		let alumnos = ["Alex", "Seba", "Juan", "Pedro", "Gabriel", "Luis"]
+		let resultado = document.querySelector("#resultado")
+
+		// Medir el array 
+		// la cantidad de elementos de un array 
+		// es el largo del array - 1 
+		// let cantAlumnos = alumnos.length - 1
+
+		// Le voy a pasar un array 
+		// Me va a devolver la posicion aleatoria
+		let fRandom = function (arr) {
+			let cantArr = arr.length - 1
+			let pos = Math.round( cantArr * Math.random() )
+
+			return pos
+		}
+
+		let sorteo = function (){
+			let posAlumno = fRandom(alumnos)
+			let alumnoSorteado = alumnos[posAlumno]
+
+			resultado.innerText = alumnoSorteado
+		}
+	</script>
+</body>
+</html>

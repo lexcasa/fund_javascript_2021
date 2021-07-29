@@ -63,3 +63,22 @@ Desplegar una lista con productos: Manzana, Pera, Ajo en un HTML ul, li en un di
 			
 		- Defino lista de productos como un HTML UL, LI
 			- Solo creo el HTML estatico en el JS
+
+EJERCICIO 5: 
+
+Dar click en un ítem de la lista de productos y obtener el nombre en un div con id="resultado"
+
+	1. Como obtengo los items de una lista del HTML
+	2. Cual es la estructura de datos que tiene esos elementos de la lista dentro javascript
+		- Necesito que sea un ARRAY
+	3. Como obtengo ese elemento y obtengo el texto
+	4. Obteniendo ese elemento insertar en un div 
+
+
+EJERCICIO 6:
+
+a. Dar click en un ítem de producto y cargar el nombre en un input type="text"
+b. Cargar texto en un input y al pulsar "agregar" cargar item en un div resultado encapsulado en una etiqueta <p>
+
+
+<p>Manzana</p>

@@ -1,0 +1,43 @@
+- GET http://localhost:8000/mensaje.json como lo hacemos desde el JS?
+
+	1. Integrar una libreria: axios
+	2. La incluimos a traves de una CDN (content delivery network)
+
+		HTTP
+			Peticion: GET
+
+			Sintaxis:
+
+			[libreria].[metodo].[then ( function (data){ ... } )]
+			function(data){...} -> Callback
+
+			axios.get(url).then( function (data){
+
+			}) 
+
+
+	Linea de tiempo de JS: 
+
+		t=0 HTML/CSS
+		t=1 evaluo el JS y cargo el DOM (document)
+		t=2 corro las funciones en tiempo de ejecucion
+			Ejemplo: console.log("hola")
+		...
+		
+		t=d (delta)
+			- Se ejecuta una funcion que hace una peticion al servidor (por que demora un tiempo a responder)
+				- API 
+				- archivo estatico
+
+		...
+
+		t=i tiempo indeterminado (tiempo de los eventos)
+
+- NUEVAS: 
+	- Comunicacion con Servidor (x)
+	- Crear un servicio (x)
+	- Obtener datos de un archivo (x)
+	- Volcar los datos a una variable de JS (x)
+	- Que es JSON? (x)
+
+

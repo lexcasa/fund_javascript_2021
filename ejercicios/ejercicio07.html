@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input type="text" name="" id="texto">
+	<button onclick="agregarTexto()">Agregar</button>
+
+	<ul id="lista"></ul>
+	<script type="text/javascript">
+		let input = document.querySelector('#texto')
+		let lista = document.querySelector('#lista')
+
+		// Definimos una estructura de control 
+		let arr   = []
+
+		let agregarTexto = function () {
+			let texto = input.value 
+
+			// Guardamos en la estructura de control
+			arr.push(texto)
+
+			let li = `` 
+
+			// Generamos el HTML con todos los textos acumulados
+			// [hola, seba, alex, juan]
+
+			for (let i = 0; i < arr.length; i++) {
+				let elemento = arr[i]
+				// (elemento de la lista, posicion)
+				// "hola", 0
+				// "seba", 1
+				// 'Alex', 2
+				// "Juan", 3
+				li += `
+					<li id="elem-${i}">${elemento} <button onclick="eliminar(${i})">Eliminar</button></li>
+				` 
+				// <li id="elem-0">hola <button onclick="eliminar(0)">Eliminar</button></li>
+				// <li id="elem-1">seba <button onclick="eliminar(1)">Eliminar</button></li>
+				// ...
+			}
+
+			// Vinculamos el HTML completo 
+			// A la lista
+			lista.innerHTML = li
+		}
+		let eliminar = function (posicion){
+			// Si fuera la posicion 0
+			// <li id="elem-0"> ... </li>
+			document.querySelector('#elem-'+posicion).outerHTML = ''
+			// ''
+			// Eliminar un elemento del array por su posicion y cantidad
+			arr.splice(posicion, 1) // Ejemplo: A partir del 0 elminar 1 elemento
+		}
+
+	</script>
+</body>
+</html>
