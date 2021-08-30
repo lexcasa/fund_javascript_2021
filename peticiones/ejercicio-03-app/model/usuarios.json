@@ -1,0 +1,23 @@
+[
+	{
+		"nombre":"Alex",
+		"apellido":"Casadevall",
+		"edad":28,
+		"covid":true,
+		"documento":"5100666-9"
+	},
+	{
+		"nombre":"Juan",
+		"apellido":"Casadevall",
+		"edad":25,
+		"covid":true,
+		"documento":"123-9"
+	},
+	{
+		"nombre":"Seba",
+		"apellido":"da Costa",
+		"edad":25,
+		"covid":true,
+		"documento":"123-9"
+	}
+]

@@ -60,3 +60,25 @@ let builder = function (){
 }
 // t = 2
 builder()
+
+let tabla = document.querySelector("#usuarios tbody")
+
+let buildTabla = function (){
+	axios.get(API + 'usuarios.json').then( function (success){
+		let usuarios = success.data
+		let tpl = ``
+		for (let i = 0; i < usuarios.length; i++){
+			tpl += `
+				<tr>
+					<td>${usuarios[i].nombre}</td>
+					<td>${usuarios[i].apellido}</td>
+					<td>${usuarios[i].edad}</td>
+					<td>${usuarios[i].covid}</td>
+					<td>${usuarios[i].documento}</td>
+				</tr>
+			`
+		}
+		tabla.innerHTML = tpl
+	})
+}
+buildTabla()
