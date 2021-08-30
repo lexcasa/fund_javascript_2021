@@ -1,0 +1,21 @@
+2) Crear un servicio que obtenga la información de una lista de productos dentro de un archivo llamado: productos.json
+	[
+		{
+			"nombre":"Manzana",
+			"precio":10
+		},
+		{
+			"nombre":"Naranja",
+			"precio":10
+		}
+	]
+Insertar la información dentro de una lista ul, li
+
+
+1. Primero: Crear el archivo productos.json
+	1.a Insertar el la estructura de la letra en el archivo
+
+2. Crear un script html
+	- Importar el axios
+
+3. Hacer la peticion de: productos.json dentro de la aplicacion

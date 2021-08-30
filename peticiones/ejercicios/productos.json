@@ -1,0 +1,18 @@
+[
+	{
+		"nombre":"Manzana",
+		"precio":10
+	},
+	{
+		"nombre":"Naranja",
+		"precio":10
+	},
+	{
+		"nombre":"Pera",
+		"precio":30
+	},
+	{
+		"nombre":"Banana",
+		"precio":15
+	}
+]

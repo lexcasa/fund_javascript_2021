@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- Importar Axios -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+	<!-- t=0 -->
+	<ul id="listaProductos"></ul>
+	<script type="text/javascript">
+		// t=1
+		let API = 'http://localhost:8080/productos.json'
+		let listaProductos = document.querySelector('#listaProductos')
+		let productos = []
+
+		// Invocar AXIOS
+		// t=delta
+		axios.get(API).then( function (success) {
+			productos = success.data
+
+			// LOGICA /// 
+				
+			let li = ``
+
+			// t=1
+			for (let i = 0; i < productos.length; i++){
+				let producto = productos[i]
+
+				li += `
+					<li>${producto.nombre} - ${producto.precio}</li>
+				`
+			}
+
+			// El template que cree 
+			// conecto con el ul que ya existe en el HTML
+			listaProductos.innerHTML = li
+
+			// LOGICA /// 
+		}, function (error){
+			console.log("error: ", error)
+		})
+
+		console.log("lista de productos api: ", productos)
+	</script>
+</body>
+</html>

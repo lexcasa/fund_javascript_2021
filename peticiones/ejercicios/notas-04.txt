@@ -1,0 +1,62 @@
+3) Crear un servicio que obtenga la información de un usuario e insertar en el formulario, correspondiente con los respectivos campos - persona.json
+
+	a) Obtengo los datos de un persona.json (x)
+		- a través de un GET
+		- cargo en el formulario
+
+	- LOGICA
+	- VISTA
+	- INTEGRACION
+
+	--- 
+
+	- MODEL: Datos
+	- VIEW: Vista
+	- CONTROLLER: integración y conexión con los datos
+
+	Arquitectura MVC
+
+	- Crear una carpeta: app 
+
+		- app
+			-- index.html
+			-- controller.js
+			-- model 
+				- persona.json
+				- formulario.json
+
+	- Correr la aplicación dentro de la carpeta app 
+		- http-server -p 8080 -c-1
+
+	- Conectar el axios dentro del index.html
+		- va a ser el auxiliar para conectarse a traves de HTTP
+
+	- Hacemos una petición de tipo: GET hacia el model/persona.json
+
+
+	c) 
+		- Crear formulario dinamico
+
+		etiqueta: <input type="text" name="" id="nombre">
+
+		Persona:
+			nombre, apellido, edad ---> propiedades
+			c/u de las propiedades se carga con valores
+
+			nombre: "Alex",
+			apellido: "Casadevall",
+			edad: 29
+
+		Etiqueta:
+			name: "input"
+			type: "text"
+			id: "nombre"
+
+
+	 - Como creamos un "builder" de formularios
+
+	 	- <input type="text" name="" id="nombre">
+	 	- <br>
+
+	 	- Voy a insertar en un formulario
+	 	- Nuestro formulario tiene que tener un "id"

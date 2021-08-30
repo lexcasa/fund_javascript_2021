@@ -1,0 +1,27 @@
+[
+	{
+		"name":"input",
+		"type":"text",
+		"id": "nombre"
+	},
+	{
+		"name":"input",
+		"type":"text",
+		"id": "apellido"
+	},
+	{
+		"name":"input",
+		"type":"number",
+		"id": "edad"
+	},
+	{
+		"name":"input",
+		"type":"checkbox",
+		"id": "covid"
+	},
+	{
+		"name":"input",
+		"type":"text",
+		"id": "documento"
+	}
+]
