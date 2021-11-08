@@ -29,3 +29,9 @@
         - develop en mi maquina
         - develop remoto (que está en el servidor)
         
+    Si quiero pasar de una rama (develop) a otra con más jerarquía (main)
+    Tengo que crear una pull request
+
+    - Primero todo el ciclo del commit
+    - Subo los cambios al remoto
+    - Genero la Pull Request (PR)
