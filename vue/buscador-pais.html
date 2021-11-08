@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+	<div id="app">
+		<input type="text" v-model="direccion">
+		<button v-on:click="buscar()">Buscar</button>
+		<hr>
+		<ul>
+			<li v-for="resultado in resultados">
+				{{resultado.display_name}}
+			</li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+		const API = 'https://nominatim.openstreetmap.org/search?q='
+		let compQuery = '&format=json&polygon=1&addressdetails=1'
+		const app = new Vue({
+			el: '#app',
+			data: {
+				direccion: '',
+				resultados: []
+			},
+			methods: {
+				buscar: function (){
+					console.log("direccion: ", this.direccion)
+					console.log("query string: ", API + this.direccion + compQuery)
+					axios.get(API + this.direccion + compQuery).then( (success) => {
+						console.log(success)
+						this.resultados = success.data
+					})
+					this.direccion = ''
+				}
+			}
+		})
+	</script>
+</body>
+</html>

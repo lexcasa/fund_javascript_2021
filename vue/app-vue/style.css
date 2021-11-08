@@ -1,0 +1,8 @@
+#app {
+	padding-top: 1rem;
+}
+.productoItem {
+	border: 1px solid;
+	padding: 0.5rem;
+	margin-top: 1rem;
+}

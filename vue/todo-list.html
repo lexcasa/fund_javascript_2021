@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+	<style type="text/css">
+		.resuelto {
+			text-decoration: line-through;
+		}
+	</style>
+</head>
+<body>
+	<div id="app">
+		<!-- Aca corre la app de vue -->
+		{{titulo}}
+		<input type="text" name="item" v-model="item">
+		<button v-on:click="agregarItem()">Agregar</button>
+		<hr>
+		<ul>
+			<!-- El v-for remplaza la funcionalidad del template -->
+			<li v-for="(item,i) in items" :key="i">
+				<span v-bind:class="{resuelto: resueltos[i]}">{{item}}</span>
+				<button v-on:click="resolverItem(i)" v-bind:disabled="resueltos[i]">Resuelto</button>
+				<button v-on:click="eliminarItem(i)">Eliminar</button>
+			</li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+		// Instanciamos la aplicacion en vue
+		const app = new Vue({
+			// Definiendo cual es el contenedor HTML que tiene su alcance
+			el: '#app',
+			// Es donde vamos a definir las variables de la aplicacion
+			data: {
+				titulo: 'ToDo list',
+				item: '',
+				items: [],
+				resueltos: []
+			},
+			// Defino las funciones de mi aplicacion
+			methods: {
+				agregarItem: function (){
+					console.log("item: ", this.item)
+					this.items.push( this.item )
+					this.resueltos.push(false)
+					this.item = ''
+				},
+				eliminarItem: function (indice){
+					console.log("indice: ", indice)
+					this.items.splice(indice, 1)
+					this.resueltos.splice(indice, 1)
+				},
+				resolverItem: function (indice){
+					this.$set(this.resueltos, indice, true)
+				}
+			}
+		})
+	</script>
+</body>
+</html>

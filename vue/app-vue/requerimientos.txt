@@ -1,0 +1,50 @@
+REQUERIMIENTOS SISTEMA CAJA
+
+	1. HTML / CSS de cada componente: 
+		- Buscador de producto
+		- Lista de productos
+			- C/Producto
+		- Carrito de la caja
+		- Input de impuestos
+		- Modulo subtotal
+		- Modulo total
+		- Boton de Cerrar 
+			-> Accion de cerrar caja 
+			-> Pantalla nueva
+
+	Obs: Para el CSS vamos a utilizar bootstrap
+
+	2. Logica basica de los componentes en VUE
+	3. Integracion de todos los componentes
+
+COMPONENTE A COMPONENTE: 
+
+	0. Sistema de dos columnas
+		-> Una columna de 30% a la izquierda
+		-> Una columna de 70% a la derecha
+
+	1. Buscador de producto [x]
+		-> Input
+		-> Boton buscar
+
+	2. Lista de productos [x] 
+		-> Un div que va a contener todos los productos
+
+	3. Producto [x]
+		-> Titulo: Etiqueta p
+		-> Precio
+		-> Cantidad
+		-> Boton agregar
+
+	4. Input de impuestos [x]
+
+	5. Carrito de la caja [x]
+
+		-> Tabla
+			-> Titulo a la izq
+			-> Input de precio
+			-> Item
+			-> Boton: Quitar
+
+	6. Modulo subtotal 
+	7. Modulo total
