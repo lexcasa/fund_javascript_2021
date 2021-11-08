@@ -1,0 +1,21 @@
+Crear una aplicación en VUE que sea una To-Do list
+
+	Requerimientos: 
+		- Input con un botón de agregar
+		- Voy agregando los elementos a una lista
+			- Acciones: 
+				Eliminar un elemento de la lista
+				Marcar que está resulto
+		--- 
+
+PROBLEMAS
+	1) Como hago el setup de una aplicacion de VUE
+		- Incluir la libreria de vue en nuestro archivo html
+		- Crear la APP de VUE en nuestro HTML
+
+
+
+
+ VUE [JS] --- {{nombreVariable}} -- > HTML
+
+ HTML --- [Directivas: v-model, v-on:click] --- > VUE [ JS ]

@@ -1,0 +1,31 @@
+- Problemas
+    - Almacenamiento del código
+    - Versionado 
+    - Metodología de trabajo
+
+- Pre-requisitos
+    - Hacerte una cuenta en GITHUB
+    - Instalar git for windows
+    - Test de instalación
+        - git --version
+
+- Ramas
+
+    (master)   ----- Ambiente de producción
+    (QA)       ----- Ambiente de pruebas
+    (develop)  ----- Ambiente de desarrollo
+
+    ---
+
+    C/rama es una linea de tiempo
+
+        - Creo una rama: develop
+        - Le digo que: "arranque a trabajar en el proyecto"
+        - Como marco los hechos en la linea de tiempo 
+        - A través del "commit"
+    
+    Dos ramas / dos lineas de tiempo
+
+        - develop en mi maquina
+        - develop remoto (que está en el servidor)
+        
